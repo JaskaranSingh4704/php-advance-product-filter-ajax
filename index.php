@@ -48,7 +48,7 @@ include('database_connection.php');
                     <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
 					<?php
 
-                    $query = "SELECT DISTINCT(product_brand) FROM product WHERE product_status = '1' ORDER BY product_id DESC";
+                    $query = "SELECT DISTINCT(product_brand) FROM products WHERE product_status = '1' ORDER BY product_id DESC";
                     $statement = $connect->prepare($query);
                     $statement->execute();
                     $result = $statement->fetchAll();
@@ -70,7 +70,7 @@ include('database_connection.php');
                     <?php
 
                     $query = "
-                    SELECT DISTINCT(product_ram) FROM product WHERE product_status = '1' ORDER BY product_ram DESC
+                    SELECT DISTINCT(product_ram) FROM products WHERE product_status = '1' ORDER BY product_ram DESC
                     ";
                     $statement = $connect->prepare($query);
                     $statement->execute();
@@ -91,7 +91,7 @@ include('database_connection.php');
 					<h3>Internal Storage</h3>
 					<?php
                     $query = "
-                    SELECT DISTINCT(product_storage) FROM product WHERE product_status = '1' ORDER BY product_storage DESC
+                    SELECT DISTINCT(product_storage) FROM products WHERE product_status = '1' ORDER BY product_storage DESC
                     ";
                     $statement = $connect->prepare($query);
                     $statement->execute();
